@@ -1,0 +1,709 @@
+@import url(../Fonts/montserrat/montserrat.css);
+@import url(../Fonts/montserrat-cufonfonts-webfont/style.css);
+@import url(../Fonts/roboto/roboto.css);
+@import 'variables';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: url(../Images/header.png);
+    background-position: center center;
+}
+
+.header__top {
+    width: 100%;
+    height: 36px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header__left {
+    font-family: 'Montserrat SemiBold';
+    font-size: 20px;
+    line-height: 24px;
+    color: $mainColor;
+    padding-top: 6px;
+    padding-left: 250px;
+}
+    .header__right {
+        padding-right: 250px;
+    }
+.header__button {
+    width: 90px;
+    height: 36px;
+    border: 2px solid $mainColor;
+    border-radius: 40px;
+    font-family: 'Montserrat Light';
+    font-size: 14px;
+    line-height: 17px;
+    color: $mainColor;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+.header__button_log-in {
+    border: none;
+}
+.header__main {
+    width: 470px;
+    margin-top: 147px;
+    @include flexbox(column, nowrap, center, center);
+    h1 {
+        font-family: 'Montserrat SemiBold';
+        font-size: 52px;
+        line-height: 63px;
+        text-align: center;
+        color: $mainColor;
+    }
+    p {
+        margin-top: 29px;
+        text-align: center;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 24px;
+        color: #F7F3F2;
+    }
+}
+button:focus {
+    outline: none;
+}
+.header__button_main {
+    width: 225px;
+    height: 40px;
+    background: $secondColor;
+    border-radius: 40px;
+    font-family: 'Montserrat SemiBold';
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $mainColor;
+    border: none;
+    margin: 33px 0px 224px; 
+    cursor: pointer;
+}
+.container {
+    width: 940px;
+    min-height: 500px;
+    margin: 0 auto;
+}
+.main__steps {
+    @include flexbox(row, nowrap, space-between, stretch);
+}
+ .sub-heading {
+    font-family: 'Montserrat SemiBold';
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: $thirdColor;
+    margin: 95px 0 35px;
+}
+.main__steps-block {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+}
+.main__steps-div {
+    margin: 220px 25px 21px 25px;
+    border-radius: 4px;
+    .button__step {
+        width: 70px;
+        height: 20px;
+        background: $secondColor;
+        border-radius: 40px;
+        font-family: 'Montserrat Light';
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 2px;
+        color: $mainColor;
+        margin-bottom: 20px;
+        border: none;
+    }
+    h2 {
+        font-family: 'Montserrat SemiBold';
+        font-size: 24px;
+        line-height: 26px;
+        color: $mainColor;
+    }
+    p {
+        font-family: 'Roboto';
+        font-size: 14px;
+        line-height: 14px;
+        color: #E3E3E3;
+        margin-top: 25px;
+    }
+}
+.step-1 {
+    background: url(../Images/step-1.png);
+    background-position: center center;
+}
+.step-2 {
+    background: url(../Images/step-2.png);
+    background-position: center center;
+}
+.step-3 {
+    background: url(../Images/step-3.png);
+    background-position: center center;
+}
+.main__partner {
+    @include flexbox(row, nowrap, space-between, stretch);
+}
+.main__partner_box {
+    width: 221px;
+    height: 224px;
+    .main__partner_image {
+        width: 126px;
+        height: 126px;
+        margin: 0 auto;
+        background-color: $thirdColor;
+        position: relative;
+        border-radius: 50%;
+    }
+    .main__partner_icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 32px;
+        height: 32px;
+        border: 3px solid white;
+        border-radius: 50%;
+        @include flexbox(row, wrap, center, center);
+    }
+}
+.main__partner_name {
+    font-family: 'Montserrat SemiBold';
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $thirdColor;
+    margin-top: 17px;
+}
+.main__partner_about {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #666666;
+    margin-top: 12px;
+}
+
+.partner-1 {
+    background: url(../Images/bradley.png);
+    background-position: center center;
+    background-size: cover;
+}
+.icon-music {
+    background-color: $secondColor;
+}
+.partner-2 {
+    background: url(../Images/marie.png);
+    background-position: center center;
+    background-size: cover;
+}
+.icon-brush {
+    background-color: #19D4CA;
+}
+.partner-3 {
+    background: url(../Images/diana.png);
+    background-position: center center;
+    background-size: cover;
+}
+.icon-camera {
+    background-color: #FFA710;
+}
+.partner-4 {
+    background: url(../Images/christopher.png);
+    background-position: center center;
+    background-size: cover;
+}
+.icon-airplane {
+    background-color: #667DF3;
+}
+.button__middle {
+    @include flexbox(row, wrap, center, center);
+}
+.button__other {
+    margin: 36px auto;
+    width: 180px;
+    height: 40px;
+    background: $mainColor;
+    border: 2px solid $secondColor;
+    border-radius: 40px;
+    font-family: 'Montserrat SemiBold';
+    font-size: 14px;
+    line-height: 17px;
+    color: $secondColor;
+    cursor: pointer;
+}
+.main__discover_level-1, 
+.main__discover_level-2, 
+.main__discover_level-3 {
+    height: 310px;
+    @include flexbox(row, nowrap, space-between, stretch);
+    margin-bottom: 20px;
+}
+.discover__sport,
+.discover__wellness,
+.discover__extreme {
+    width: 300px;
+    height: 310px;
+    @include flexbox(row, nowrap, center, center);
+    font-family: 'Montserrat';
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    color: $mainColor;
+    border-radius: 4px;
+}
+.discover__sport {
+    background: url(../Images/sport.png);
+    background-position: center center;
+}
+.discover__wellness {
+    background: url(../Images/wellness.png);
+    background-position: center center;
+}
+.discover__extreme {
+    background: url(../Images/extreme.png);
+    background-position: center center;
+}
+.discover__games,
+.discover__cultute {
+    @include flexbox(row, nowrap, center, center);
+    background-position: center center;
+    @include discover;
+    border-radius: 4px;
+}
+.discover__games {
+    width: 300px;
+    height: 310px;
+    background: url(../Images/games.png);
+}
+.discover__cultute {
+    width: 620px;
+    height: 310px;
+    background: url(../Images/culture.png);
+}
+.discover__enjoyment,
+.discover__travelling {
+    @include flexbox(row, nowrap, center, center);
+    background-position: center center;
+    @include discover;
+    border-radius: 4px;
+}
+.discover__enjoyment {
+    width: 620px;
+    height: 310px;
+    background: url(../Images/enjoyment.png);
+}
+.discover__travelling {
+    width: 300px;
+    height: 310px;
+    background: url(../Images/travelling.png);
+}
+.main__create {
+    p {
+        font-family: 'Roboto';
+        font-size: 18px;
+        line-height: 14px;
+        text-align: center;
+        color: #666666;
+    }
+}
+.main__create_form {
+    @include flexbox(row, nowrap, center, center);
+    margin: 25px 0 100px;
+    input[type="text"] {
+        width: 300px;
+        height: 40px;
+        background: $mainColor;
+        border: 1px solid #D4D4D4;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+        border-radius: 3px;
+    }
+    input[type="text"]::placeholder{
+        font-family: 'Roboto';
+        font-size: 14px;
+        line-height: 16px;
+        color: #999999;
+        text-indent: 14px;
+    }
+    input[type="text"]:focus {
+        outline: none;
+    }
+    input[type="submit"] {
+        width: 172px;
+        height: 40px;
+        background: $secondColor;
+        border-radius: 40px;
+        font-family: 'Montserrat SemiBold';
+        font-size: 14px;
+        line-height: 17px;
+        color: $mainColor;  
+        margin-left: 10px;  
+        cursor: pointer;
+        border: none;
+    }
+}
+.footer {
+    border-top: 2px solid $secondColor;
+    height: 260px;
+}
+.footer__main {
+    width: 940px;
+    height: inherit;
+    margin: 0 auto;
+    @include flexbox(row, nowrap, space-between, stretch);
+}
+.footer__box {
+    height: inherit;
+    width: 25%;
+    padding-top: 38px;
+}
+.footer__dreamshare {
+    font-family: 'Montserrat ExtraLight';
+    font-size: 16px;
+    line-height: 20px;
+    color: $secondColor;
+}
+.footer__company {
+    h4 {
+        font-family: 'Montserrat SemiBold';
+        font-size: 14px;
+        line-height: 17px;
+        color: #444444;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 11px;
+    }
+    a:link {
+        text-decoration: none;
+        font-family: 'Roboto';
+        font-size: 14px;
+        line-height: 26px;
+        color: #999999;
+    }
+    a:visited {
+        color: #999999;
+    }
+}
+.footer__partners {
+    @extend .footer__company;
+}
+.footer__logo {
+    position: relative;
+    p {
+        font-family: 'Montserrat SemiBold';
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        color: #CCCCCC;
+        text-align: right;
+    }
+    img {
+        position: absolute;
+        width: 110px;
+        height: 24px;
+        margin-top: 7px;
+        right: 0;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .header__top {
+        width: 748px;
+    }
+    .header__left {
+        padding-left: 50px;
+    }
+    .header__right {
+        padding-right: 50px;
+    }
+    .container {
+        width: 748px;
+    }
+    .sub-heading {
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .main__steps-block {
+        width: 236px;
+        height: 400px;
+    }
+    .main__steps-div {
+        margin: 205px 20px 16px 20px;
+        h2 {
+            line-height: 14px;
+        }
+        p {
+            font-family: 'Roboto';
+            font-size: 14px;
+            line-height: 14px;
+            color: #E3E3E3;
+        }
+    }
+    .main__partner {
+        @include flexbox(column, wrap, center, center);
+        width: 492px;
+        max-height: 580px;
+        margin: 0 auto;
+    }
+    .main__partner_box {
+        width: 236px;
+        height: 224px;
+    }
+    .button__other {
+        margin: 16px auto 0;
+     
+    }
+    .discover__sport,
+    .discover__wellness,
+    .discover__extreme {
+        width: 236px;
+        padding: 15px;
+    }
+    .discover__games {
+        width: 236px;
+        padding: 15px;
+    } 
+    .discover__cultute {
+        width: 492px;
+        padding: 15px;
+    }
+    .discover__enjoyment {
+        width: 492px;
+        height: 310px;
+        padding: 15px;
+    }
+    .discover__travelling {
+        width: 236px;
+        padding: 15px;
+    }
+    .footer {
+        height: 244px;
+    }
+    .footer__main {
+        width: 748px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header {
+        height: 540px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: start;
+        background: url(../Images/header-small.png);
+        background-size: cover;
+    }
+    .header__top {
+        width: 300px;
+        min-height: 155px;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__left {
+        padding: 0px;
+        margin: 0;
+    }
+    .header__button {
+        width: 90px;
+        height: 36px;
+        border: 2px solid $mainColor;
+        border-radius: 40px;
+        font-family: 'Montserrat Light';
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 97px;
+    }
+    .header__button_log-in {
+        border: none;
+    }
+    .header__main {
+        width: 310px;
+        margin-top: 26px;
+        h1 {
+            font-family: 'Montserrat SemiBold';
+            font-size: 30px;
+            line-height: 37px;
+        }
+        p {
+            margin-top: 5px;
+            font-size: 18px;
+            line-height: 24px;
+            padding: 0 20px 0 20px;
+        }
+    }
+    .header__button_main {
+        width: 280px;
+        margin: 15px auto; 
+    }
+    .container {
+        width: 300px;
+    }
+    .sub-heading {
+        margin: 34px 0 15px;
+    }
+    .main__steps {
+        @include flexbox(column, nowrap, start, center);
+        min-height: 600px;
+        
+    }
+    .main__steps-block {
+        width: 300px;
+        height: 240px;
+        margin-bottom: 10px;
+    }
+    .main__steps-div {
+        margin: 64px 20px 16px 30px;
+    }
+    .step-3 {
+        margin-bottom: 0;
+    }
+    .main__partner {
+        @include flexbox(column, nowrap, start, center);
+        min-height: 900px;
+        width: 300px;
+    }
+    .main__partner_box {
+        margin: 0 auto;
+        margin-bottom: 0;
+    }
+    .main__partner_box:nth-child(1) {order: 1;}
+    .main__partner_box:nth-child(2) {order: 3;}
+    .main__partner_box:nth-child(3) {order: 2;}
+    .main__partner_box:nth-child(4) {order: 4;}
+
+    .button__middle {
+        @include flexbox(row, wrap, center, center);
+    }
+    .button__other {
+        margin: 13px auto;
+        width: 280px;
+    }
+    .main__discover {
+        width: 300px;
+        min-height: 600px;
+        @include flexbox(column, nowrap, center, center);
+        margin: 0 auto;
+    }
+    .main__discover_level-1 {
+        min-height: 360px;
+        @include flexbox(column, nowrap, center, center);
+        margin: 0 auto;
+    }
+
+    .main__discover_level-2, 
+    .main__discover_level-3 {
+        height: 250px;
+        @include flexbox(column, nowrap, center, center);
+        margin: 0 auto;
+    }
+    .discover__sport,
+    .discover__wellness,
+    .discover__extreme,
+    .discover__games,
+    .discover__cultute,
+    .discover__enjoyment,
+    .discover__travelling {
+        width: 300px;
+        height: 120px;
+        @include flexbox(column, nowrap, center, center);
+        font-size: 22px;
+        line-height: 27px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        background-size: initial;  
+    }
+    .discover__sport {
+        background: url(../Images/sport-small.png);
+    }
+    .discover__wellness {
+        background: url(../Images/wellness-small.png);
+    }
+    .discover__extreme {
+        background: url(../Images/extreme-small.png);
+    }
+    .discover__games {
+        background: url(../Images/games-small.png);
+    }
+    .discover__cultute {
+        background: url(../Images/culture-small.png);
+    }
+    .discover__enjoyment {
+        background: url(../Images/enjoyment-small.png);
+    }
+    .discover__travelling {
+        background: url(../Images/travelling-small.png);
+    }
+    .main__create_form {
+        @include flexbox(column, nowrap, center, center);
+        margin: 15px 0 40px;
+        input[type="text"] {
+            width: 280px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            width: 280px;
+            font-size: 14px;
+            margin: 0 auto;  
+        }
+    }
+    .footer {
+        height: 226px;
+    }
+    .footer__main {
+        width: 310px;
+        @include flexbox(column, nowrap, start, center);
+        
+    }
+    .footer__box {
+        height: auto;
+        width: 100%;
+        @include flexbox(column, nowrap, start, center);
+        margin: 0 auto;
+        padding-top: 0;
+    }
+    .footer__dreamshare {
+        margin-top: 20px;
+        margin-bottom: 13px;
+    }
+    .footer__company {
+        @include flexbox(column, nowrap, center, center);
+
+        ul {
+            @include flexbox(row, wrap, center, stretch);
+            margin-top: 1px;
+        }
+        li {
+            margin: 0 15px 0 15px;
+        }
+    }
+    .footer__partners {
+        margin-top: 6px;
+        margin-bottom: 14px;
+    }
+    .footer__logo {
+        position: relative;
+        margin: 0 auto;
+        img {
+            position: relative;
+        }
+    }
+}
